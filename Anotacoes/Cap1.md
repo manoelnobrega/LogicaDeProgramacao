@@ -28,7 +28,7 @@ Ainda neste capítulo temos uma breve introdução alguns dos testes que que pod
 
 A representação do algoritmo pode se dar de diversas formas, são elas: gráfica, textual, fluxogramas, diagrama de chapin, etc.
 
-´´´
+```
 ---
 config:
   theme: redux
@@ -52,4 +52,4 @@ flowchart TD
     n6@{ shape: rect}
     n8@{ shape: rect}
     n11@{ shape: rounded}
-´´´
+```
