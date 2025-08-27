@@ -28,28 +28,21 @@ Ainda neste capítulo temos uma breve introdução alguns dos testes que que pod
 
 A representação do algoritmo pode se dar de diversas formas, são elas: gráfica, textual, fluxogramas, diagrama de chapin, etc.
 
+Temos aqui o exemplo da representação por meio de fluxograma do algoritmo da Torre de Hanói que consiste de três hastes (uma haste de origem da torre) e três discos de tamanhos diferentes (1 < 2 < 3) que devem ser transferidos para uma outra haste, sem colocar um disco maior sobre um menor e movendo apenas um disco por vez.
+
+```mermaid
+flowchart  TD
+A(["Início"])  -->  B["Retirar o disco 1 da haste de origem"]
+B  -->  n1["Colocar o disco 1 em uma haste vazia"]
+n1  -->  n2["Retirar o disco 2 da haste de origem"]
+n2  -->  n3["Colocar o disco 2 na única haste vazia"]
+n3  -->  n4["Colocar o disco 1 na mesma haste do disco 2"]
+n4  -->  n5["Retirar o disco 3 da haste de origem"]
+n5  -->  n6["Colocar o disco 3 na haste vazia que não é a haste de origem"]
+n6  -->  n7["Retirar o disco 1 de sua haste"]
+n7  -->  n8["Colocar o disco 1 na única haste vazia"]
+n8  -->  n9["Colocar o disco 2 na mesma haste do disco 3"]
+n9  -->  n10["Colocar o disco 1 na mesma haste dos discos 2 e 3"]
+n10  -->  n11(["Fim"])
 ```
----
-config:
-  theme: redux
----
-flowchart TD
-    A(["Início"]) --> B["Retirar o disco 1 da haste de origem"]
-    B --> n1["Colocar o disco 1 em uma haste vazia"]
-    n1 --> n2["Retirar o disco 2 da haste de origem"]
-    n2 --> n3["Colocar o disco 2 na única haste vazia"]
-    n3 --> n4["Colocar o disco 1 na mesma haste do disco 2"]
-    n4 --> n5["Retirar o disco 3 da haste de origem"]
-    n5 --> n6["Colocar o disco 3 na haste vazia que não é a haste de origem"]
-    n6 --> n7["Retirar o disco 1 de sua haste"]
-    n7 --> n8["Colocar o disco 1 na única haste vazia"]
-    n8 --> n9["Colocar o disco 2 na mesma haste do disco 3"]
-    n9 --> n10["Colocar o disco 1 na mesma haste dos discos 2 e 3"]
-    n10 --> n11["Fim"]
-    B@{ shape: rect}
-    n2@{ shape: rect}
-    n5@{ shape: rect}
-    n6@{ shape: rect}
-    n8@{ shape: rect}
-    n11@{ shape: rounded}
-```
+
